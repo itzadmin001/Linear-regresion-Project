@@ -12,13 +12,13 @@ st.set_page_config(
 )
 
 # --- Load Model and Scaler ---
-# Make sure these files ('linear_model.pkl' and 'scaler.pkl') are in the same directory
+# Make sure these files ('KNN.pkl' and 'scaler.pkl') are in the same directory
 # as your Streamlit app file (e.g., app.py) or provide the full path.
 try:
-    model = pickle.load(open('linear_model.pkl', 'rb'))
+    model = pickle.load(open('knn_model.pkl', 'rb'))
     scaler = pickle.load(open('scaler.pkl', 'rb'))
 except FileNotFoundError:
-    st.error("Sorry, model or scaler files not found. Please ensure 'linear_model.pkl' and 'scaler.pkl' are in the same directory.")
+    st.error("Sorry, model or scaler files not found. Please ensure 'knn_model.pkl' and 'scaler.pkl' are in the same directory.")
     st.stop() # Stop the app if files are not found
 
 # --- Custom CSS for a more modern look ---
@@ -219,4 +219,4 @@ if st.button('Predict House Price', key='predict_button'):
 
 # --- Footer ---
 st.markdown('---')
-st.info('This app is based on a linear regression model trained on the California housing dataset.')
+st.info('This app is based on a KNN (K-Nearest Neighbors) model trained on the California housing dataset.')

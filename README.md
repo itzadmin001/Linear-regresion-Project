@@ -4,13 +4,12 @@ This repository contains a Streamlit application to predict California housing p
 
 ## Provided Results
 
-- Mean Squared Error: 4974811836.391974
-- R-squared: 0.6266814954463519
-- Adjusted R-squared: 0.6258024526100224
+- Mean Squared Error: 3.843007e+09
+- R-squared: 0.711614
 
 ## Usage
 
-1. Place your `linear_model.pkl` and `scaler.pkl` in the project root (or upload them via the app UI).
+1. Place your `knn_model.pkl` and `scaler.pkl` in the project root (or upload them via the app UI).
 2. Install dependencies:
 
 ```bash
